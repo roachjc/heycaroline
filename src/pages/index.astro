@@ -1,5 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const links = [
+  {
+    label: `Work`,
+    href: `#`
+  },
+  {
+    label: `Pricing`,
+    href: `#`
+  },
+  {
+    label: `Services`,
+    href: `#`
+  },
+  {
+    label: `About Me`,
+    href: `#`
+  },
+  {
+    label: `Blog`,
+    href: `#`
+  }
+];
 ---
 
 <Layout title="Hey, Caroline!">
@@ -50,17 +73,20 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <!-- DT Links -->
       <div class="hidden lg:flex lg:gap-x-12">
+        {
+          links.map((link) => (
+            <a
+              href={link.href}
+              class="text-sm font-semibold leading-6 text-gray-900"
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-          >Product</a
-        >
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-          >Features</a
-        >
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-          >Marketplace</a
-        >
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-          >Company</a
+          >Get in touch <span aria-hidden="true">&rarr;</span></a
         >
       </div>
     </nav>
@@ -115,25 +141,22 @@ import Layout from '../layouts/Layout.astro';
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
+              {
+                links.map((link) => (
+                  <a
+                    href={link.href}
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    {link.label}
+                  </a>
+                ))
+              }
+            </div>
+            <div class="py-6">
               <a
                 href="#"
-                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Product</a
-              >
-              <a
-                href="#"
-                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Features</a
-              >
-              <a
-                href="#"
-                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Marketplace</a
-              >
-              <a
-                href="#"
-                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >Company</a
+                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >Get in touch</a
               >
             </div>
           </div>
@@ -142,27 +165,15 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </header>
 
-  <!-- <div class="relative isolate px-6 pt-14 lg:px-8"> -->
-  <!-- BLUR -->
-  <!-- <div
-        class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        aria-hidden="true"
-      >
-        <div
-          class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-          style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-        >
-        </div>
-      </div> -->
   <main
-    class="px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-24 lg:gap-0 justify-evenly"
+    class="px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-24 lg:gap-12 justify-evenly"
   >
     <div class="max-w-2xl pt-16 lg:py-56">
       <div class="hidden sm:mb-8 sm:flex sm:justify-center">
         <div
           class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
         >
-          Announcing our next round of funding. <a
+          Announcing discounts for small businesses. <a
             href="#"
             class="font-semibold text-indigo-600"
             ><span class="absolute inset-0" aria-hidden="true"></span>Read more <span
@@ -180,8 +191,8 @@ import Layout from '../layouts/Layout.astro';
         </h1>
         <p class="mt-6 text-lg leading-8 text-gray-600">
           Hey, I’m Caroline! Your sister in digital marketing. I've been
-          creating successful marketing campaigns for small businesses and
-          enterprise companies for over 10 years.
+          creating successful digital marketing campaigns for small businesses
+          and enterprise companies for over 10 years.
         </p>
 
         <div class="mt-10 flex items-center justify-center gap-x-6">
@@ -207,28 +218,11 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
     </div>
-    <img src="/caroline.jpeg" class="rounded-2xl rotate-6 w-60 opacity-75" />
-  </main>
-  <!-- BLUR -->
-  <!-- <div
-        class="
-      absolute
-      inset-x-0
-      top-[calc(100%-13rem)]
-      -z-10
-      transform-gpu
-      overflow-hidden
-      blur-3xl
-      sm:top-[calc(100%-30rem)]"
-      aria-hidden="true"
+    <img
+      src="/caroline.jpeg"
+      class="rounded-2xl rotate-6 w-60 lg:w-80 opacity-85"
     />
-    <div
-      class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
-    >
-    </div>
-  </main> -->
-  <!-- </div> -->
+  </main>
 </Layout>
 
 <script>
