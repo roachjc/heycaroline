@@ -33,7 +33,7 @@ const links = [
     >
       <!-- Logo -->
       <div class="flex lg:flex-1">
-        <a href="#" class="-m-1.5 p-1.5">
+        <a href="/" class="-m-1.5 p-1.5">
           <span class="sr-only">Caroline Sancken</span>
           <svg
             class="h-8 w-8 lg:h-10 lg:w-10"
@@ -166,9 +166,9 @@ const links = [
   </header>
 
   <main
-    class="px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-24 lg:gap-12 justify-evenly"
+    class="px-6 lg:px-8 py-16 lg:py-56 flex flex-col lg:flex-row items-center gap-24 lg:gap-12 justify-start lg:justify-evenly flex-grow"
   >
-    <div class="max-w-2xl pt-16 lg:py-56">
+    <div class="max-w-2xl">
       <div class="hidden sm:mb-8 sm:flex sm:justify-center">
         <div
           class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
@@ -218,11 +218,16 @@ const links = [
         </div>
       </div>
     </div>
+
     <img
       src="/caroline.jpeg"
-      class="rounded-2xl rotate-6 w-60 lg:w-80 opacity-80"
+      class="opacity-80 rounded-2xl rotate-6 w-60 lg:w-80"
     />
   </main>
+  <footer class="p-6 lg:p-8 text-center text-sm leading-6 text-slate-500">
+    <p>© 2023 Caroline Sancken. All rights reserved.</p>
+    <a href="mailto:hey@carolinesancken.com">hey@carolinesancken.com</a>
+  </footer>
 </Layout>
 
 <script>
