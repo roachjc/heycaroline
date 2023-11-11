@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Mark from '../components/Mark.astro';
+import Para from '../components/Para.astro';
+---
+
+<Layout>
+  <main class="flex-grow">
+    <div
+      class="px-6 lg:px-8 py-16 lg:py-56 flex flex-col lg:flex-row items-center gap-24 lg:gap-12 justify-start lg:justify-evenly flex-grow lg:items-start"
+    >
+      <Header>Hey, <Mark>You</Mark>!</Header>
+      <Para>
+        <a href="mailto:caroline.sancken@gmail.com"
+          >caroline.sancken@gmail.com</a
+        >
+      </Para>
+      <Para><a href="tel:2069141257">206-914-1257</a></Para>
+    </div>
+  </main>
+</Layout>

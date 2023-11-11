@@ -1,65 +1,67 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Mark from '../components/Mark.astro';
+import Para from '../components/Para.astro';
 ---
 
 <Layout title="Hey, Caroline!">
-  <main
-    class="px-6 lg:px-8 py-16 lg:py-56 flex flex-col lg:flex-row items-center gap-24 lg:gap-12 justify-start lg:justify-evenly flex-grow lg:items-start"
-  >
-    <div class="max-w-2xl">
-      <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-        <div
-          class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
-        >
-          Announcing discounts for small businesses. <a
-            href="#"
-            class="font-semibold text-indigo-600"
-            ><span class="absolute inset-0" aria-hidden="true"></span>Read more <span
-              aria-hidden="true">&rarr;</span
-            ></a
+  <main class="flex-grow">
+    <Hero>
+      <div class="max-w-2xl">
+        <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+          <div
+            class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
           >
-        </div>
-      </div>
-      <div class="text-center relative">
-        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          Hey, <mark
-            class="bg-transparent shadow-[inset_0_-0.5em_0_0_rgb(240,171,252)]"
-            >Caroline</mark
-          >!
-        </h1>
-        <p class="mt-6 text-lg leading-8 text-gray-600">
-          Hey, I’m Caroline! Your sister in digital marketing. I've been
-          creating successful digital marketing campaigns for small businesses
-          and enterprise companies for over 10 years.
-        </p>
-
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
-            >Learn more <span aria-hidden="true">→</span></a
-          >
-          <div class="absolute left-0 right-0 flex items-center justify-center">
-            <svg
-              class="w-44 stroke-current stroke-[0.1875rem] text-purple-400 animate-scribble"
-              viewBox="0 0 176 55"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-dasharray="500"
-              stroke-dashoffset="0"
-              aria-hidden="true"
-              ><path
-                d="M28.0001 9.50003C34 6.00006 75.5 1.18613e-05 107 1.99997C138.5 3.99993 167 7.00013 172.5 23.5001C178 40 127 49 83.0001 52C39.0002 55.0001 -2.49983 51.0001 4.50007 31.5001C11.5 12 93.5 1.60145 123 7.00001"
-              ></path></svg
+            Announcing discounts for small businesses. <a
+              href="#"
+              class="font-semibold text-indigo-600"
+              ><span class="absolute inset-0" aria-hidden="true"></span>Read
+              more <span aria-hidden="true">&rarr;</span></a
             >
           </div>
         </div>
-      </div>
-    </div>
+        <div class="text-center relative">
+          <Header>
+            Hey, <Mark>Caroline</Mark>!
+          </Header>
+          <Para>
+            Hey, I’m Caroline! Your sister in digital marketing. I've been
+            creating successful digital marketing campaigns for small businesses
+            and enterprise companies for over 10 years.
+          </Para>
 
-    <img
-      src="/caroline.jpeg"
-      class="opacity-80 rounded-2xl rotate-6 w-60 lg:w-80"
-    />
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="#" class="text-sm font-semibold leading-6 text-gray-900"
+              >Learn more <span aria-hidden="true">→</span></a
+            >
+            <div
+              class="absolute left-0 right-0 flex items-center justify-center"
+            >
+              <svg
+                class="w-44 stroke-current stroke-[0.1875rem] text-purple-400 animate-scribble"
+                viewBox="0 0 176 55"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-dasharray="500"
+                stroke-dashoffset="0"
+                aria-hidden="true"
+                ><path
+                  d="M28.0001 9.50003C34 6.00006 75.5 1.18613e-05 107 1.99997C138.5 3.99993 167 7.00013 172.5 23.5001C178 40 127 49 83.0001 52C39.0002 55.0001 -2.49983 51.0001 4.50007 31.5001C11.5 12 93.5 1.60145 123 7.00001"
+                ></path></svg
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img
+        src="/caroline.jpeg"
+        class="opacity-80 rounded-2xl rotate-6 w-60 lg:w-80"
+      />
+    </Hero>
   </main>
 </Layout>
