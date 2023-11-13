@@ -4,10 +4,11 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Mark from '../components/Mark.astro';
 import Para from '../components/Para.astro';
+import Main from '../components/Main.astro';
 ---
 
 <Layout title="Hey, Caroline!">
-  <main class="flex-grow">
+  <Main>
     <Hero>
       <div class="max-w-2xl">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
@@ -63,5 +64,5 @@ import Para from '../components/Para.astro';
         class="opacity-80 rounded-2xl rotate-6 w-60 lg:w-80"
       />
     </Hero>
-  </main>
+  </Main>
 </Layout>
