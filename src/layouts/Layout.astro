@@ -1,6 +1,6 @@
 ---
 import Mark from '../components/Mark.astro';
-const { title } = Astro.props;
+const { title, page } = Astro.props;
 const links = [
   {
     label: `Work With Me`,
@@ -41,7 +41,7 @@ const links = [
         aria-label="Global"
       >
         <!-- Logo -->
-        <div class="flex lg:flex-1">
+        <div class="flex">
           <a href="/" class="-m-1.5 p-1.5">
             <span class="sr-only">Caroline Sancken</span>
             <svg
@@ -59,7 +59,7 @@ const links = [
         </div>
 
         {
-          title !== 'Hey, Caroline!' && (
+          page !== 'home' && (
             <span class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Hey, <Mark>Caroline!</Mark>
             </span>
@@ -67,7 +67,7 @@ const links = [
         }
 
         <!-- Hamburger Button -->
-        <div class="flex lg:hidden">
+        <div class="flex">
           <button
             type="button"
             class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -89,35 +89,9 @@ const links = [
             </svg>
           </button>
         </div>
-
-        <!-- DT Links -->
-        <div class="hidden lg:flex lg:gap-x-12">
-          {
-            links.map((link) => (
-              <a
-                href={link.href}
-                class="text-sm font-semibold leading-6 text-gray-900"
-              >
-                {link.label}
-              </a>
-            ))
-          }
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href="/contact"
-            class="text-sm font-semibold leading-6 text-gray-900"
-            >Get in touch <span aria-hidden="true">&rarr;</span></a
-          >
-        </div>
       </nav>
       <!-- Mobile menu, show/hide based on menu open state. -->
-      <div
-        class="hidden lg:hidden"
-        role="dialog"
-        aria-modal="true"
-        id="mobile-menu"
-      >
+      <div class="hidden" role="dialog" aria-modal="true" id="mobile-menu">
         <!-- Background backdrop, show/hide based on slide-over state. -->
         <div class="fixed inset-0 z-50" data-mobile-menu-close></div>
         <div
